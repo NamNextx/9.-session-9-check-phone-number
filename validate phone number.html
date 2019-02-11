@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>validatte phone number</title>
+</head>
+<body>
+<!--Số điện thoại hợp lệ cần đạt theo mẫu sau: (xx)-(0xxxxxxxxx)
+
+x là ký tự số
+
+Không chứa các ký tự đặc biệt
+
+Ví dụ số điện thoại hợp lệ: (84)-(0978489648)
+
+Ví dụ tên lớp không hợp lệ: (a8)-(22222222)-->
+
+<input type="text" id="idInput">
+<input type="button" value="check phone number" onclick="checkPhoneNumber()">
+<script>
+    function checkPhoneNumber() {
+        var input = document.getElementById('idInput').value;
+        regex = /^\([0-9]{2}\)\-\([0][0-9]{9}\)$/
+        if (regex.test(input)) {
+            alert("ok")
+        } else alert("no")
+    }
+</script>
+</body>
+</html>
